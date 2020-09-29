@@ -19,7 +19,8 @@ public class StepDef {
 	
 	   @Given("^the user navigates to Facebook$") 
 	   public void goToFacebook() { 
-	      driver = new FirefoxDriver(); 
+	      System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 	      driver.navigate().to("https://www.facebook.com/"); 
 	   } 
 		
